@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:theme="@style/DialogFragmentTheme"
+    tools:context="ui.filterdialog.FilterFrDialog"
+>
+
+    <LinearLayout
+        android:id="@+id/layoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:weightSum="3">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_weight="2"
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:defaultQueryHint="e.g. 'football'"
+            app:iconifiedByDefault="false"
+             />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/layoutId">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <GridLayout
+                android:id="@+id/contentGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_horizontal"
+                android:alignmentMode="alignBounds"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:padding="0dp"
+                android:useDefaultMargins="true"
+                android:visibility="visible">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="order-by"
+                    android:textSize="20dp" />
+
+
+                <Spinner
+                    android:id="@+id/orderById"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:entries="@array/order_by"
+                    android:padding="16dp"
+                    android:spinnerMode="dropdown" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="show-elements"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="use-date"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/showElementsID"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:entries="@array/show_elements"
+                    android:padding="16dp"
+                    android:spinnerMode="dropdown" />
+
+                <Spinner
+                    android:id="@+id/useDateId"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:entries="@array/use_date"
+                    android:padding="16dp"
+                    android:spinnerMode="dropdown" />
+
+<!--                <EditText-->
+<!--                    android:id="@+id/showTagsEdit"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill_horizontal"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:hint="show-tags"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/black_overlay"-->
+<!--                    android:textSize="20dp" />-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/showReferencesEdit"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_gravity="fill_horizontal"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:hint="show-references"-->
+<!--                    android:padding="16dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textColorHint="@color/black_overlay"-->
+<!--                    android:textSize="20dp" />-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="from-date"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="to-date"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/pickFromBtn"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:padding="16dp"
+                    android:text="Pick date"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/pickToBtn"
+                    android:layout_width="0dp"
+                    android:layout_columnWeight="1"
+                    android:padding="16dp"
+                    android:text="Pick date"
+                    android:textColor="@color/black" />
+
+
+            </GridLayout>
+
+
+
+            <Button
+                android:id="@+id/searchButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/search"
+                android:padding="16dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_light_background"
+    android:layout_marginBottom="16dp"
+    app:cardElevation="2dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="4dp"
+    app:cardPreventCornerOverlap="true"
+    >
+    <ImageView
+        android:background="@color/cardview_light_background"
+        android:id="@+id/favImageItem"
+        android:scaleType="fitStart"
+        android:importantForContentCapture="auto"
+        android:outlineProvider="background"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:backgroundTint="#F5F6F6"
+        />
+    <LinearLayout
+        android:background="#c5cae9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:paddingStart="16dp"
+                android:id="@+id/favTitleItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="start|center_horizontal"
+                android:text="@string/title"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:src="@drawable/ic_baseline_delete_24"
+                android:id="@+id/favContentDelete"
+                android:backgroundTint="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:background="@color/blue"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_marginStart="4dp"
+            android:id="@+id/favSecondaryTextItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="@string/secondary_text"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

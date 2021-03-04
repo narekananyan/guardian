@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">The GuardianApi</string>
+    <string name="sections">SECTIONS</string>
+    <string name="favourite">FAVOURITE</string>
+    <string name="contentRoom">CONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="the_guardian">The Guardian</string>
+    <string name="title">Title</string>
+    <string name="secondary_text">Secondary</string>
+    <string name="sectionfilter">sectionFilter</string>
+    <string name="searchsection">searchSection</string>
+    <string name="clear_all_favorits">Clear all favorits</string>
+    <string name="search">Search</string>
+    <string-array name="frag_names">
+        <item >@string/sections</item>
+        <item >@string/contentRoom</item>
+        <item >@string/favourite</item>
+    </string-array>
+    <string-array name="fav_names">
+        <item>Favorite Sections</item>
+        <item>Favorite Contents</item>
+    </string-array>
+    <string-array name="order_by">
+        <item>None</item>
+        <item>newest</item>
+        <item>oldest</item>
+        <item>relevance</item>
+    </string-array>
+    <string-array name="show_elements">
+        <item>None</item>
+        <item>audio</item>
+        <item>image</item>
+        <item>video</item>
+        <item>all</item>
+    </string-array>
+    <string-array name="use_date">
+        <item>None</item>
+        <item>published</item>
+        <item>newspaper-edition</item>
+        <item>last-modified</item>
+    </string-array>
+</resources>
