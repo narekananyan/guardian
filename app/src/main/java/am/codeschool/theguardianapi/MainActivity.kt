@@ -1,5 +1,6 @@
 package am.codeschool.theguardianapi
 
+import am.codeschool.news.TestNews
 import am.codeschool.theguardianapi.databinding.ActivityMainBinding
 import am.codeschool.theguardianapi.ui.adapters.FragmentAdapter
 import am.codeschool.theguardianapi.ui.base.BaseActivity
@@ -48,7 +49,7 @@ class MainActivity : BaseActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         initViews()
-
+        val test = TestNews()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
