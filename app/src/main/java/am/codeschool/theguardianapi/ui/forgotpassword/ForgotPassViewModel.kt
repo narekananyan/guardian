@@ -1,0 +1,6 @@
+package am.codeschool.theguardianapi.ui.forgotpassword
+
+import am.codeschool.authorization.AuthorizationSharedRepository
+import am.codeschool.authorization.BaseAuthorizationViewModel
+
+class ForgotPassViewModel(private val repository: AuthorizationSharedRepository):BaseAuthorizationViewModel(repository)

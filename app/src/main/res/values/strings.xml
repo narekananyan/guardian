@@ -13,9 +13,9 @@
     <string name="clear_all_favorits">Clear all favorits</string>
     <string name="search">Search</string>
     <string-array name="frag_names">
-        <item >@string/sections</item>
-        <item >@string/contentRoom</item>
-        <item >@string/favourite</item>
+        <item>@string/sections</item>
+        <item>@string/contentRoom</item>
+        <item>@string/favourite</item>
     </string-array>
     <string-array name="fav_names">
         <item>Favorite Sections</item>
